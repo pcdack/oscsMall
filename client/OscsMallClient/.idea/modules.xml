@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/OscsMallClient.iml" filepath="$PROJECT_DIR$/OscsMallClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/creamsoda-core/creamsoda-core.iml" filepath="$PROJECT_DIR$/creamsoda-core/creamsoda-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fast-dev/fast-dev.iml" filepath="$PROJECT_DIR$/fast-dev/fast-dev.iml" />
+    </modules>
+  </component>
+</project>

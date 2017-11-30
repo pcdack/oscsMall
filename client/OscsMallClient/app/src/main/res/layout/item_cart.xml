@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@android:color/white"
+    android:layout_marginBottom="5dp"
+    android:orientation="horizontal">
+    <com.joanzapata.iconify.widget.IconTextView
+        android:id="@+id/select_icon_cart"
+        android:layout_marginLeft="10dp"
+        android:textSize="@dimen/btn_text_size"
+        android:text="@string/fa_check_circle_o"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/cart_item_img"
+        android:layout_gravity="center_vertical"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        tools:ignore="ContentDescription" />
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/cart_item_title"
+            android:textColor="@color/we_chat_black"
+            android:textSize="@dimen/text_size"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/cart_item_desc"
+            android:textSize="@dimen/desc_text_size"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/cart_item_price"
+            android:textColor="@android:color/holo_red_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="25dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_height="match_parent">
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/cart_add_icon"
+            android:text="@string/fa_angle_up"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp" />
+        <TextView
+            android:id="@+id/cart_num"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp" />
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/cart_les_icon"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/fa_angle_down"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

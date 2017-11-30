@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginBottom="5dp"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <TextView
+            android:id="@+id/receiver_name_tv"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/we_chat_black"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/receiver_phone_tv"
+            android:gravity="right|center"
+            android:paddingRight="5dp"
+            android:textColor="@color/we_chat_black"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/receiver_address"
+        android:padding="5dp"
+        android:textColor="@color/we_chat_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:gravity="right|center"
+        android:orientation="horizontal"
+        android:paddingRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/shipping_edit"
+            android:gravity="center"
+            android:textColor="@color/we_chat_black"
+            android:layout_marginRight="5dp"
+            android:text="{fa-pencil-square-o}编辑"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/shipping_delete"
+            android:gravity="center"
+            android:textColor="@color/we_chat_black"
+            android:text="{fa-trash-o}删除"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

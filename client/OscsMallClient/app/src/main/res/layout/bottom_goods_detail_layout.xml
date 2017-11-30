@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/goods_bottom"
+    android:background="@android:color/white"
+    android:layout_alignParentBottom="true"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal">
+    <View
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"/>
+   <RelativeLayout
+       android:background="@android:color/white"
+       android:layout_weight="0.5"
+       android:gravity="center"
+       android:layout_width="0dp"
+       android:layout_height="match_parent">
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/icon_shop_cart"
+            android:text="{fa-shopping-cart}"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@android:color/darker_gray"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+       <TextView
+           android:gravity="center"
+           android:textColor="@android:color/darker_gray"
+           android:textSize="10sp"
+           android:layout_below="@+id/icon_shop_cart"
+           android:text="购物车"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
+       <win.pcdack.creamsoda_core.ui.widget.CircleTextView
+           android:id="@+id/shop_cart_count"
+           android:textColor="@android:color/white"
+           android:textSize="10sp"
+           android:layout_marginTop="1dp"
+           android:gravity="center"
+           android:layout_alignRight="@+id/icon_shop_cart"
+           android:layout_width="15dp"
+           android:layout_height="15dp" />
+   </RelativeLayout>
+    <Button
+        android:id="@+id/add_into_shopping_cart"
+        android:text="喜加一"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_orange_dark"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

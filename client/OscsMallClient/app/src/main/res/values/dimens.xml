@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_input_margin">8dp</dimen>
+    <dimen name="btn_text_size">22sp</dimen>
+    <dimen name="btn_margin">20dp</dimen>
+    <dimen name="btn_padding">10dp</dimen>
+    <dimen name="toolbar_text_size">20sp</dimen>
+    <dimen name="toolbar_height">70dp</dimen>
+    <dimen name="status_bar_margin_top">20dp</dimen>
+    <dimen name="offset">5dp</dimen>
+    <dimen name="logo_width_size">72dp</dimen>
+    <dimen name="function_icon_width">60dp</dimen>
+    <dimen name="tool_bar_title_size">20sp</dimen>
+    <dimen name="content_margin">6dp</dimen>
+    <dimen name="sort_list_line_width">3dp</dimen>
+    <dimen name="text_size">18sp</dimen>
+    <dimen name="desc_text_size">12sp</dimen>
+    <dimen name="normal_size_text">15sp</dimen>
+    <dimen name="search_bar_height">80dp</dimen>
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/m_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@android:color/holo_red_light">
+
+        <com.joanzapata.iconify.widget.IconTextView
+            android:id="@+id/back_icon"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/status_bar_margin_top"
+            android:gravity="center"
+            android:text="@string/fa_arrow_left"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/toolbar_text_size" />
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:text="@string/order_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/status_bar_margin_top"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/toolbar_text_size"
+            android:textStyle="bold" />
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:background="@android:color/white"
+        android:id="@+id/my_shipping"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <com.joanzapata.iconify.widget.IconTextView
+            android:text="@string/fa_map_marker"
+            android:textSize="@dimen/btn_text_size"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/receiver"
+                android:textColor="@android:color/black"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+            <TextView
+                android:id="@+id/receiver_phone_num"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+            <TextView
+                android:id="@+id/receiver_add"
+                android:maxLines="2"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+        </LinearLayout>
+        <com.joanzapata.iconify.widget.IconTextView
+            android:text="@string/fa_arrow_circle_right"
+            android:gravity="center"
+            android:textSize="@dimen/btn_text_size"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/order_goods_rv"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+    <include layout="@layout/bottom_order_detail_layout"/>
+</LinearLayout>

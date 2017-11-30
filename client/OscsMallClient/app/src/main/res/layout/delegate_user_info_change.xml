@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/background_color">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/user_info_change_back_icon"
+                android:text="@string/fa_arrow_left"
+                android:gravity="center"
+                android:textSize="@dimen/tool_bar_title_size"
+                android:layout_marginTop="@dimen/status_bar_margin_top"
+                android:textColor="@android:color/white"
+                android:layout_width="40dp"
+                android:layout_height="60dp" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/status_bar_margin_top"
+                android:gravity="center"
+                android:text="@string/user_info_change"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/tool_bar_title_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/user_info_rv"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+    <Button
+        android:id="@+id/confirm_the_change_btn"
+        android:textColor="@android:color/white"
+        android:background="@color/view_color"
+        android:padding="@dimen/btn_padding"
+        android:textSize="@dimen/normal_size_text"
+        android:layout_margin="@dimen/btn_margin"
+        android:text="@string/confirm_the_change"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

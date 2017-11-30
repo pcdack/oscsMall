@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Fast-Dev</string>
+    <string name="fa_arrow_left">{fa-arrow-left}</string>
+    <string name="fa_plus">{fa-plus}</string>
+</resources>

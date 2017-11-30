@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/background_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/status_bar_margin_top"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/cart_title"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/tool_bar_title_size"
+                android:textStyle="bold" />
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/delete_carts_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="@dimen/status_bar_margin_top"
+                android:gravity="center_horizontal"
+                android:text="@string/fa_trash_icon"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cart_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/icon_is_select_all"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/fa_check_circle_o"
+                android:textSize="@dimen/btn_text_size" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:text="@string/all_select_text"
+                android:textColor="@color/view_color"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/total_price"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center_vertical"
+                android:textColor="@color/view_color" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/settlement_btn"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@color/background_color"
+            android:gravity="center"
+            android:text="@string/settlement_btn_text"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/btn_text_size" />
+    </LinearLayout>
+</LinearLayout>

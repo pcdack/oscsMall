@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/background_color">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/shipping_back_icon"
+                android:text="{fa-arrow-left}"
+                android:gravity="center"
+                android:textSize="@dimen/tool_bar_title_size"
+                android:layout_marginTop="@dimen/status_bar_margin_top"
+                android:textColor="@android:color/white"
+                android:layout_width="50dp"
+                android:layout_height="60dp" />
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/status_bar_margin_top"
+                android:gravity="center"
+                android:text="@string/ship_title"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/tool_bar_title_size"
+                android:textStyle="bold" />
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/shipping_add"
+                android:textColor="@android:color/white"
+                android:text="{fa-plus}"
+                android:gravity="center"
+                android:textSize="@dimen/tool_bar_title_size"
+                android:layout_marginTop="@dimen/status_bar_margin_top"
+                android:layout_width="50dp"
+                android:layout_height="60dp" />
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/shipping_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

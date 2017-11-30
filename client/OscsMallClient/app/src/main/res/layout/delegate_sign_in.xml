@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            app:layout_scrollFlags="scroll"
+            android:layout_width="match_parent"
+            android:background="@color/md_red_700"
+            android:layout_height="@dimen/toolbar_height">
+            <android.support.v7.widget.AppCompatTextView
+                android:gravity="bottom"
+                android:textSize="@dimen/toolbar_text_size"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/offset"
+                android:text="@string/sign_in_title"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.AppCompatTextView
+                android:gravity="center"
+                android:textSize="35sp"
+                android:textColor="@color/md_red_500"
+                android:text="@string/app_name"
+                android:layout_width="match_parent"
+                android:layout_height="72dp" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginBottom="@dimen/text_input_margin"
+                android:layout_marginTop="@dimen/text_input_margin"
+                android:layout_marginLeft="@dimen/text_input_margin"
+                android:layout_marginRight="@dimen/text_input_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edit_sign_in_name"
+                    android:hint="@string/sign_name"
+                    android:inputType="textPersonName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginBottom="@dimen/text_input_margin"
+                android:layout_marginTop="@dimen/text_input_margin"
+                android:layout_marginLeft="@dimen/text_input_margin"
+                android:layout_marginRight="@dimen/text_input_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edit_sign_in_password"
+                    android:hint="@string/sign_password"
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/sign_in_btn"
+                android:text="@string/sign_in_title"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/btn_text_size"
+                android:layout_marginTop="@dimen/btn_margin"
+                android:layout_marginLeft="@dimen/btn_margin"
+                android:layout_marginRight="@dimen/btn_margin"
+                android:padding="@dimen/btn_padding"
+                android:gravity="center"
+                android:background="@color/md_red_400"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/sign_up_tv"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="@dimen/btn_margin"
+                android:layout_marginBottom="@dimen/btn_margin"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:text="@string/sign_in_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

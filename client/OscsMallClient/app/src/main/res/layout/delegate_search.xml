@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/search_bar_height"
+        android:background="@color/background_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/search_back_icon"
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/status_bar_margin_top"
+                android:gravity="center"
+                android:text="@string/fa_arrow_left"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/tool_bar_title_size" />
+
+            <EditText
+                android:id="@+id/search_edit"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/status_bar_margin_top"
+                android:hint="@string/search_title"
+                android:layout_weight="1"
+                android:background="@drawable/search_edit_background"
+                android:gravity="center" />
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:id="@+id/search_icon"
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/status_bar_margin_top"
+                android:gravity="center"
+                android:text="@string/fa_search"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/tool_bar_title_size" />
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CreamSoda-core</string>
+    <string name="change_avatar">修改头像</string>
+    <string name="take_pic">拍照</string>
+    <string name="local">本地</string>
+    <string name="fa_arrow_left">{fa-arrow-left}</string>
+    <string name="cancel">取消</string>
+</resources>
