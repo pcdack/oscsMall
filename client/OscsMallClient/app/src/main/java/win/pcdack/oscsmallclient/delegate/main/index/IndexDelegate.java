@@ -3,6 +3,7 @@ package win.pcdack.oscsmallclient.delegate.main.index;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.StringDef;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.AppCompatEditText;
@@ -28,6 +29,7 @@ import win.pcdack.creamsoda_core.ui.recycler.MultipleItemEntity;
 import win.pcdack.creamsoda_core.ui.recycler.MultipleRecyclerAdapter;
 import win.pcdack.creamsoda_core.util.callback.CallBackManager;
 import win.pcdack.creamsoda_core.util.callback.IGlobalCallback;
+import win.pcdack.ec.fast_dev.delegate.normalWebViewDelegate.NormalWebViewDelegate;
 import win.pcdack.oscsmallclient.R;
 import win.pcdack.oscsmallclient.delegate.detail.goods.GoodsDetailDelegate;
 import win.pcdack.oscsmallclient.delegate.search.SearchDelegate;
@@ -144,6 +146,48 @@ public class IndexDelegate extends BottomItemDelegate
                     iPresenter.getIndexItems(false);
                 }
             },indexRv);
+            adapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
+                @Override
+                public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
+                    MultipleItemEntity entity= (MultipleItemEntity) adapter.getData().get(position);
+                    ArrayList<String> urls=entity.getField(MultipleFields.URL);
+                    ArrayList<String> titles=entity.getField(MultipleFields.TEXT);
+                    switch (view.getId()) {
+                        case win.pcdack.creamsoda_core.R.id.function_one_img:
+                            getParentDelegate().getSupportDelegate().start(NormalWebViewDelegate.create(titles.get(0),urls.get(0)));
+                            break;
+                        case win.pcdack.creamsoda_core.R.id.function_two_img:
+                            getParentDelegate().getSupportDelegate().start(NormalWebViewDelegate.create(titles.get(1),urls.get(1)));
+                            break;
+                        case win.pcdack.creamsoda_core.R.id.function_three_img:
+                            getParentDelegate().getSupportDelegate().start(NormalWebViewDelegate.create(titles.get(2),urls.get(2)));
+                            break;
+                        case win.pcdack.creamsoda_core.R.id.function_four_img:
+                            getParentDelegate().getSupportDelegate().start(NormalWebViewDelegate.create(titles.get(3),urls.get(3)));
+                            break;
+                        case win.pcdack.creamsoda_core.R.id.function_five_img:
+                            getParentDelegate().getSupportDelegate().start(NormalWebViewDelegate.create(titles.get(4),urls.get(4)));
+                            break;
+                        case win.pcdack.creamsoda_core.R.id.function_six_img:
+                            getParentDelegate().getSupportDelegate().start(NormalWebViewDelegate.create(titles.get(5),urls.get(5)));
+                            break;
+                        case win.pcdack.creamsoda_core.R.id.function_seven_img:
+                            getParentDelegate().getSupportDelegate().start(NormalWebViewDelegate.create(titles.get(6),urls.get(6)));
+                            break;
+                        case win.pcdack.creamsoda_core.R.id.function_eight_img:
+                            getParentDelegate().getSupportDelegate().start(NormalWebViewDelegate.create(titles.get(7),urls.get(7)));
+                            break;
+                        case win.pcdack.creamsoda_core.R.id.function_nine_img:
+                            getParentDelegate().getSupportDelegate().start(NormalWebViewDelegate.create(titles.get(8),urls.get(8)));
+                            break;
+                        case win.pcdack.creamsoda_core.R.id.function_ten_img:
+                            getParentDelegate().getSupportDelegate().start(NormalWebViewDelegate.create(titles.get(9),urls.get(9)));
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            });
         }else
             adapter.setNewData(datas);
     }

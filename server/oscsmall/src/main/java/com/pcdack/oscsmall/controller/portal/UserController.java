@@ -8,7 +8,6 @@ import com.pcdack.oscsmall.pojo.User;
 import com.pcdack.oscsmall.service.IFileService;
 import com.pcdack.oscsmall.service.IUserService;
 import com.pcdack.oscsmall.util.PropertiesUtil;
-import com.sun.istack.internal.NotNull;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -110,7 +109,7 @@ public class UserController {
 
     @RequestMapping(value = "forget_reset_password.do",method = RequestMethod.POST)
     @ResponseBody
-    public ServerResponse<String> forgetResetPassword(String username, @NotNull String newPassword, String forgetToken){
+    public ServerResponse<String> forgetResetPassword(String username,String newPassword, String forgetToken){
         if (StringUtils.isEmpty(newPassword))
             return ServerResponse.createByErrorMessage("新密码为空");
         return iUserService.forgetResetPassword(username, newPassword, forgetToken);

@@ -9,8 +9,10 @@ import com.franmontiel.persistentcookiejar.PersistentCookieJar;
 import com.franmontiel.persistentcookiejar.cache.SetCookieCache;
 import com.franmontiel.persistentcookiejar.persistence.SharedPrefsCookiePersistor;
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
+import com.mob.MobSDK;
 import com.orhanobut.logger.AndroidLogAdapter;
 
+import cn.jpush.android.api.JPushInterface;
 import es.dmoral.toasty.Toasty;
 import okhttp3.logging.HttpLoggingInterceptor;
 import win.pcdack.creamsoda_core.app.CreamSoda;
@@ -59,6 +61,9 @@ public class App extends Application {
                 .setInfoColor(ContextCompat.getColor(this,R.color.md_blue_600))
                 .setTextColor(ContextCompat.getColor(this,R.color.md_white_1000))
                 .apply();
+        JPushInterface.setDebugMode(true);
+        JPushInterface.init(this);
+        MobSDK.init(this, "22c2cda972a8a", "cf0fe13a4cfa31f9fd017519640319c4");
 
     }
 }

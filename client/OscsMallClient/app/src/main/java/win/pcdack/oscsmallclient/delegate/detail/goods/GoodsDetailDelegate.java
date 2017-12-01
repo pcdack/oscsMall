@@ -20,6 +20,7 @@ import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import cn.sharesdk.onekeyshare.OnekeyShare;
 import me.yokeyword.fragmentation.anim.DefaultVerticalAnimator;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
 import win.pcdack.creamsoda_core.delegates.CreamSodaDelegate;
@@ -61,6 +62,15 @@ public class GoodsDetailDelegate extends CreamSodaDelegate implements AppBarLayo
     @OnClick(R.id.icon_goods_back)
     void onBackIconClick() {
         getSupportDelegate().pop();
+    }
+    @OnClick(R.id.icon_share)
+    void onSharedClick(){
+        OnekeyShare oks = new OnekeyShare();
+        //关闭sso授权
+        oks.disableSSOWhenAuthorize();
+        oks.setTitle("标题");
+        oks.setText("我是分享文本");
+        oks.show(getContext());
     }
 
     public static GoodsDetailDelegate create(int goodsId) {

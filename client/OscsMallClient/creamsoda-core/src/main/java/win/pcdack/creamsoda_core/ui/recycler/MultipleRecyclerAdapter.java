@@ -166,5 +166,15 @@ public class MultipleRecyclerAdapter extends BaseMultiItemQuickAdapter<MultipleI
         Glide.with(mContext).load(functionImages.get(7)).apply(OPTIONS).into(imageView8);
         Glide.with(mContext).load(functionImages.get(8)).apply(OPTIONS).into(imageView9);
         Glide.with(mContext).load(functionImages.get(9)).apply(OPTIONS).into(imageView10);
+        holder.addOnClickListener(R.id.function_one_img)
+                .addOnClickListener(R.id.function_two_img)
+                .addOnClickListener(R.id.function_three_img)
+                .addOnClickListener(R.id.function_four_img)
+                .addOnClickListener(R.id.function_five_img)
+                .addOnClickListener(R.id.function_six_img)
+                .addOnClickListener(R.id.function_seven_img)
+                .addOnClickListener(R.id.function_eight_img)
+                .addOnClickListener(R.id.function_nine_img)
+                .addOnClickListener(R.id.function_ten_img);
     }
 }

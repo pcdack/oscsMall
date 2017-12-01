@@ -12,6 +12,15 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "48a9758c91873b2271120907",
+                JPUSH_CHANNEL: "developer-default",
+        ]
     }
     buildTypes {
         release {
@@ -25,4 +34,16 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':fast-dev')
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+    compile 'cn.jiguang.sdk:jpush:3.0.1'
+    compile 'cn.jiguang.sdk:jcore:1.1.0'
+    compile files('libs/MobCommons-2017.1024.1907.jar')
+    compile files('libs/MobTools-2017.1024.1907.jar')
+    compile files('libs/ShareSDK-Alipay-Core-3.1.1.jar')
+    compile files('libs/ShareSDK-Alipay-Moments-3.1.1.jar')
+    compile files('libs/ShareSDK-Core-3.1.1.jar')
+    compile files('libs/ShareSDK-Email-3.1.1.jar')
+    compile files('libs/ShareSDK-Facebook-3.1.1.jar')
+    compile files('libs/ShareSDK-QZone-3.1.1.jar')
+    compile files('libs/ShareSDK-TencentWeibo-3.1.1.jar')
+    compile files('libs/ShareSDK-Twitter-3.1.1.jar')
 }
