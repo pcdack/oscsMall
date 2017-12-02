@@ -35,6 +35,7 @@ public class SearchDataCovnter extends DataCoverter {
             final int span_size=object.getInteger("span_size");
             final int index_kind=object.getInteger("index_kind");
             entity=MultipleItemEntity.builder()
+                    .setItemType(SearchType.GOODS_SEARCH)
                     .setField(MultipleFields.ITEM_TYPE, SearchType.GOODS_SEARCH)
                     .setField(MultipleFields.ID,id)
                     .setField(MultipleFields.NAME,name)

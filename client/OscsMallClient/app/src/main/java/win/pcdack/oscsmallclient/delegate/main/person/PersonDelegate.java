@@ -8,14 +8,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.request.RequestOptions;
-import com.orhanobut.logger.Logger;
-
 import butterknife.BindView;
 import butterknife.OnClick;
-import win.pcdack.GlobalUrlVal;
+import win.pcdack.oscsmallclient.GlobalUrlVal;
 import win.pcdack.creamsoda_core.delegates.bottom.BottomItemDelegate;
 import win.pcdack.creamsoda_core.ui.loader.CreamSodaLoader;
 import win.pcdack.creamsoda_core.util.image.ImageUtils;

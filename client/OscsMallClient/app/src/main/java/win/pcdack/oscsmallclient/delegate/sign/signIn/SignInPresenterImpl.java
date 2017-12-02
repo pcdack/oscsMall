@@ -10,7 +10,7 @@ import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
-import win.pcdack.GlobalUrlVal;
+import win.pcdack.oscsmallclient.GlobalUrlVal;
 import win.pcdack.creamsoda_core.net.rx.RxRestClient;
 import win.pcdack.oscsmallclient.delegate.sign.SignHandler;
 

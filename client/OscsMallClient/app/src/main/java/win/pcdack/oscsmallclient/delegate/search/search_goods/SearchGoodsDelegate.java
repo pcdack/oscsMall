@@ -75,7 +75,7 @@ public class SearchGoodsDelegate extends NormalDelegateWithBackIcon implements S
 
     @Override
     public void onBindView(@Nullable Bundle savedInstanceState, @NonNull View rootView) {
-        super.onBindView(savedInstanceState, rootView);
+    super.onBindView(savedInstanceState, rootView);
         presenter=new SearchGoodsPresenter(this);
         if (categoryId == 0){
             presenter.initSearchByKeyWord(myKeyWord);

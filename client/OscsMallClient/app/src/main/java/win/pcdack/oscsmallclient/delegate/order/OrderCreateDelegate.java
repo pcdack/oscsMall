@@ -137,7 +137,7 @@ public class OrderCreateDelegate extends CreamSodaDelegate implements OrderCreat
 
     @Override
     public void setAllPrices(int prices) {
-        orderTotalPrice.setText(String.valueOf(prices));
+        orderTotalPrice.setText("$"+String.valueOf(prices));
     }
 
 

@@ -1,4 +1,4 @@
-package win.pcdack;
+package win.pcdack.oscsmallclient;
 
 /**
  * Created by pcdack on 17-11-11.

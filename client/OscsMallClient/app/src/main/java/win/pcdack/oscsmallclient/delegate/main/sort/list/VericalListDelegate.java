@@ -7,15 +7,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.orhanobut.logger.Logger;
-
 import java.util.ArrayList;
 
 import butterknife.BindView;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
-import win.pcdack.GlobalUrlVal;
+import win.pcdack.oscsmallclient.GlobalUrlVal;
 import win.pcdack.creamsoda_core.delegates.CreamSodaDelegate;
 import win.pcdack.creamsoda_core.net.rx.RxRestClient;
 import win.pcdack.creamsoda_core.ui.loader.CreamSodaLoader;

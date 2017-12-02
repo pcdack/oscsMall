@@ -80,11 +80,7 @@ public class SearchDelegate extends CreamSodaDelegate {
         if (!TextUtils.isEmpty(searchStr)) {
             saveItem(searchStr);
             searchEdit.setText("");
-            MultipleItemEntity entity=MultipleItemEntity.builder().setField(MultipleFields.TEXT,searchStr).build();
-            adapter.addData(entity);
-            // TODO: 17-11-2 打开SearchGoodsDelegate
             getSupportDelegate().start(SearchGoodsDelegate.create(searchStr));
-
         }
     }
     @OnClick(R.id.search_back_icon)

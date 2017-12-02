@@ -1,7 +1,6 @@
 package win.pcdack.oscsmallclient.delegate.main.sort.content;
 
 import android.os.Bundle;
-import android.support.annotation.ArrayRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
@@ -9,7 +8,6 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
-import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
 
@@ -17,7 +15,7 @@ import butterknife.BindView;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
-import win.pcdack.GlobalUrlVal;
+import win.pcdack.oscsmallclient.GlobalUrlVal;
 import win.pcdack.creamsoda_core.delegates.CreamSodaDelegate;
 import win.pcdack.creamsoda_core.net.rx.RxRestClient;
 import win.pcdack.creamsoda_core.ui.loader.CreamSodaLoader;

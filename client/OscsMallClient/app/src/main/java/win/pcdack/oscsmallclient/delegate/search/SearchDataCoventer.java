@@ -30,6 +30,7 @@ class SearchDataCoventer extends DataCoverter {
                 final String historyItemText = array.getString(i);
                 final MultipleItemEntity entity = MultipleItemEntity.builder()
                         .setItemType(SearchType.ITEM_SEARCH)
+                        .setField(MultipleFields.ITEM_TYPE, SearchType.ITEM_SEARCH)
                         .setField(MultipleFields.TEXT, historyItemText)
                         .build();
                 ENTITIES.add(entity);

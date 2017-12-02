@@ -19,7 +19,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import me.yokeyword.fragmentation.anim.DefaultHorizontalAnimator;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
-import win.pcdack.GlobalUrlVal;
+import win.pcdack.oscsmallclient.GlobalUrlVal;
 import win.pcdack.creamsoda_core.delegates.CreamSodaDelegate;
 import win.pcdack.creamsoda_core.net.RestClient;
 import win.pcdack.creamsoda_core.net.callback.IError;

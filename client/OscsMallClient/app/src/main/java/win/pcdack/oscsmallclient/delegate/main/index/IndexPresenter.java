@@ -8,7 +8,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
-import win.pcdack.GlobalUrlVal;
+import win.pcdack.oscsmallclient.GlobalUrlVal;
 import win.pcdack.creamsoda_core.net.rx.RxRestClient;
 import win.pcdack.creamsoda_core.ui.recycler.MultipleItemEntity;
 import win.pcdack.oscsmallclient.base.BaseObserver;

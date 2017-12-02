@@ -32,6 +32,7 @@ import win.pcdack.creamsoda_core.util.callback.IGlobalCallback;
 import win.pcdack.ec.fast_dev.delegate.normalWebViewDelegate.NormalWebViewDelegate;
 import win.pcdack.oscsmallclient.R;
 import win.pcdack.oscsmallclient.delegate.detail.goods.GoodsDetailDelegate;
+import win.pcdack.oscsmallclient.delegate.notice.NoticeDelegate;
 import win.pcdack.oscsmallclient.delegate.search.SearchDelegate;
 
 /**
@@ -64,6 +65,10 @@ public class IndexDelegate extends BottomItemDelegate
     @OnClick(R.id.index_qrcode_scan)
     void qrCodeClicked(){
         startScanWithCheck(this.getParentDelegate());
+    }
+    @OnClick(R.id.index_info_message)
+    void onInfoClick(){
+        getParentDelegate().getSupportDelegate().start(new NoticeDelegate());
     }
 
     @Override
