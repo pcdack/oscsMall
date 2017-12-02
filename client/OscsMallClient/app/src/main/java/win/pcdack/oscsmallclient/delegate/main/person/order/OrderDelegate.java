@@ -16,6 +16,7 @@ import win.pcdack.creamsoda_core.net.RestClient;
 import win.pcdack.creamsoda_core.net.callback.IError;
 import win.pcdack.creamsoda_core.net.callback.IFailure;
 import win.pcdack.creamsoda_core.net.callback.ISuccess;
+import win.pcdack.creamsoda_core.ui.recycler.BaseDecoration;
 import win.pcdack.creamsoda_core.ui.recycler.MultipleItemEntity;
 import win.pcdack.ec.fast_dev.delegate.normalDelegateWithBackIcon.NormalDelegateWithBackIcon;
 import win.pcdack.oscsmallclient.R;
@@ -55,6 +56,7 @@ public class OrderDelegate extends NormalDelegateWithBackIcon implements BaseQui
     protected void initRecycleView(RecyclerView recyclerView) {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.addItemDecoration(new BaseDecoration(ContextCompat.getColor(getContext(),R.color.gray),2));
     }
 
     public static OrderDelegate newInsance(String url) {

@@ -8,12 +8,14 @@ import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.ToxicBakery.viewpager.transforms.DefaultTransformer;
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.joanzapata.iconify.widget.IconTextView;
+import com.orhanobut.logger.Logger;
 import com.zzhoujay.richtext.RichText;
 
 import java.util.ArrayList;
@@ -161,6 +163,8 @@ public class GoodsDetailDelegate extends CreamSodaDelegate implements AppBarLayo
 
     @Override
     public FragmentAnimator onCreateFragmentAnimator() {
+        Logger.d("animator in delegate");
         return new DefaultVerticalAnimator();
     }
+
 }

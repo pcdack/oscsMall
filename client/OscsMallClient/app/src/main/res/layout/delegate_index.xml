@@ -20,7 +20,7 @@
         app:layout_behavior="win.pcdack.oscsmallclient.delegate.main.index.TransluncentBehavior"
         android:layout_width="match_parent"
         android:background="@android:color/transparent"
-        android:layout_height="@dimen/toolbar_height">
+        android:layout_height="@dimen/toolbar_main_height">
         <android.support.v7.widget.LinearLayoutCompat
             android:layout_marginTop="@dimen/status_bar_margin_top"
             android:orientation="horizontal"
@@ -47,7 +47,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_weight="4"
                 android:layout_width="0dp"
-                android:layout_height="40dp" />
+                android:layout_height="25dp" />
             <com.joanzapata.iconify.widget.IconTextView
                 android:id="@+id/index_info_message"
                 android:layout_gravity="right"

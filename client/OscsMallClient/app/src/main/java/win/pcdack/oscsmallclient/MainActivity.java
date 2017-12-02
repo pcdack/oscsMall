@@ -9,6 +9,8 @@ import android.support.v7.app.ActionBar;
 import com.orhanobut.logger.Logger;
 
 import es.dmoral.toasty.Toasty;
+import me.yokeyword.fragmentation.anim.DefaultHorizontalAnimator;
+import me.yokeyword.fragmentation.anim.FragmentAnimator;
 import qiu.niorgai.StatusBarCompat;
 import win.pcdack.creamsoda_core.activities.ProxyActivity;
 import win.pcdack.creamsoda_core.app.AccentManager;
@@ -129,5 +131,10 @@ public class MainActivity extends ProxyActivity implements ILauncherFinish ,IScr
     @Override
     public void registerSuccess() {
         getSupportDelegate().startWithPop(new SignInDelegate());
+    }
+
+    @Override
+    public FragmentAnimator onCreateFragmentAnimator() {
+        return new DefaultHorizontalAnimator();
     }
 }
