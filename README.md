@@ -76,6 +76,26 @@
 
 ##　客户端
 
+展示
+
+![](http://upload-images.jianshu.io/upload_images/2583346-61ab0dd927adabc6.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+
+* 分类
+
+![](http://upload-images.jianshu.io/upload_images/2583346-e7262a0125ec4a17.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+
+* 寻觅(混合开发，图中展示了js与java互相调用的场景)
+
+![](http://upload-images.jianshu.io/upload_images/2583346-f0928043c0c5f3e2.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+
+* 购物车(购物车每次点击都以为着网络请求，所以这里的请求是相对比较密集的)
+
+![](http://upload-images.jianshu.io/upload_images/2583346-6303283fac1a50a3.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+
+* 个人中心（我的,其中空白的是由于我直接更改数据库造成的）
+
+![](http://upload-images.jianshu.io/upload_images/2583346-83bf2c26259db0bc.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
+
 #### 客户端的整体架构
 
 ![App架构](./pic/App架构.png)
