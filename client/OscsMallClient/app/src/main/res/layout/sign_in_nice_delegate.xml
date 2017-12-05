@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FEFEFE"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/login_fullsize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="35dp"
+                android:layout_height="match_parent" />
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:text="{fa-user}"
+                android:textColor="@color/md_blue_200"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="35dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/edit_sign_in_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/edit_text_list"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="35dp"
+                android:layout_height="match_parent" />
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:paddingTop="2dp"
+                android:text="{fa-key}"
+                android:textColor="@color/md_blue_200"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="35dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/edit_sign_in_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/edit_text_list"
+                android:inputType="textPassword"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sign_in_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="120dp"
+                android:layout_height="match_parent" />
+
+            <com.joanzapata.iconify.widget.IconTextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="{fa-play-circle}"
+                android:textColor="@color/md_blue_200"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOGIN"
+                android:textColor="@color/md_blue_400" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sign_up_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="170dp"
+            android:text="FORGOT PASSWORD?" />
+    </LinearLayout>
+
+    <win.pcdack.creamsoda_core.ui.widget.MultWaveView
+        android:layout_width="match_parent"
+        android:layout_height="180dp" />
+</LinearLayout>

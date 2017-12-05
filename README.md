@@ -76,6 +76,20 @@
 
 ##　客户端
 
+# 更新Login界面
+
+很多人吐槽很丑所以我会一步一步的慢慢将界面逐渐美化
+
+![](./pic/LoginGif.gif)
+
+
+
+
+
+
+
+
+
 展示
 
 ![](http://upload-images.jianshu.io/upload_images/2583346-61ab0dd927adabc6.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)

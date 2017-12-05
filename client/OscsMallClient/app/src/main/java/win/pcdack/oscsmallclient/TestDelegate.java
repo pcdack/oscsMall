@@ -4,20 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.View;
-import android.widget.Toast;
 
-import java.util.WeakHashMap;
-
-import io.reactivex.Observable;
-import io.reactivex.Observer;
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.disposables.Disposable;
-import io.reactivex.schedulers.Schedulers;
 import win.pcdack.creamsoda_core.delegates.CreamSodaDelegate;
-import win.pcdack.creamsoda_core.net.RestClient;
-import win.pcdack.creamsoda_core.net.RestCreator;
-import win.pcdack.creamsoda_core.net.callback.ISuccess;
-import win.pcdack.creamsoda_core.net.rx.RxRestClient;
 
 /**
  * Created by pcdack on 17-11-10.
@@ -27,21 +15,11 @@ import win.pcdack.creamsoda_core.net.rx.RxRestClient;
 public class TestDelegate extends CreamSodaDelegate {
     @Override
     public Object setLayout() {
-        return R.layout.test_delegate;
+        return R.layout.sign_in_nice_delegate;
     }
 
     @Override
     public void onBindView(@Nullable Bundle savedInstanceState, @NonNull View rootView) {
-        RestClient.builder()
-                .url("https://www.baidu.com")
-                .success(new ISuccess() {
-                    @Override
-                    public void onSuccess(String response) {
-                        Toast.makeText(getProxyActivity(), "成功", Toast.LENGTH_SHORT).show();
-                    }
-                }).build().get();
-//        rxGetTest();
-//        rxGetTest2();
     }
 // // TODO: 17-11-10 RxGet测试
 //    private void rxGetTest2() {

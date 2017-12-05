@@ -7,9 +7,9 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.TextInputEditText;
 import android.view.View;
-
+import android.widget.EditText;
+import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -23,52 +23,58 @@ import win.pcdack.oscsmallclient.R;
  *
  */
 
-public class SignInDelegate extends CreamSodaDelegate implements SignInContract.View{
+public class SignInDelegate extends CreamSodaDelegate implements SignInContract.View {
     @BindView(R.id.edit_sign_in_name)
-    TextInputEditText nameEdit;
+    EditText nameEdit;
     @BindView(R.id.edit_sign_in_password)
-    TextInputEditText passwordEdit;
+    EditText passwordEdit;
+    @BindView(R.id.sign_up_tv)
+    TextView forgotPassword;
     private SignInPresenterImpl iPresenter;
     private ISignInStatusListener listener;
 
 
     @Override
     public Object setLayout() {
-        return R.layout.delegate_sign_in;
+        return R.layout.sign_in_nice_delegate;
     }
+
     @OnClick(R.id.sign_up_tv)
-    void onSignInToSignUp(){
-        if (listener!=null)
+    void onSignInToSignUp() {
+        if (listener != null)
             listener.goToSignUp();
     }
+
     @OnFocusChange(R.id.edit_sign_in_name)
-    void nameOnFocus(boolean hasFoucs){
+    void nameOnFocus(boolean hasFoucs) {
         if (!hasFoucs)
             iPresenter.checkIsNotUserName(getInputEditText(nameEdit));
     }
+
     @OnFocusChange(R.id.edit_sign_in_password)
-    void passwordOnFocus(boolean hasFoucs){
+    void passwordOnFocus(boolean hasFoucs) {
         if (!hasFoucs)
             iPresenter.checkIsNotPassword(getInputEditText(passwordEdit));
     }
+
     @OnClick(R.id.sign_in_btn)
-    void onSignIn(){
-        boolean isPass=true;
-        if (!iPresenter.checkIsNotUserName(getInputEditText(nameEdit))){
-            isPass=false;
+    void onSignIn() {
+        boolean isPass = true;
+        if (!iPresenter.checkIsNotUserName(getInputEditText(nameEdit))) {
+            isPass = false;
         }
-        if (!iPresenter.checkIsNotPassword(getInputEditText(passwordEdit))){
-            isPass=false;
+        if (!iPresenter.checkIsNotPassword(getInputEditText(passwordEdit))) {
+            isPass = false;
         }
         if (isPass) {
-            iPresenter.login(getInputEditText(nameEdit),getInputEditText(passwordEdit));
+            iPresenter.login(getInputEditText(nameEdit), getInputEditText(passwordEdit));
         }
 
     }
 
     @Override
     public void onBindView(@Nullable Bundle savedInstanceState, @NonNull View rootView) {
-        iPresenter=new SignInPresenterImpl(this);
+        iPresenter = new SignInPresenterImpl(this);
     }
 
     @Override
@@ -80,15 +86,16 @@ public class SignInDelegate extends CreamSodaDelegate implements SignInContract.
     public void setPasswordError(String passwordError) {
         passwordEdit.setError(passwordError);
     }
+
     @Override
     public void setLoginSuccess(String info) {
-       getProxyActivity().showSuccessMassage(info);
+        getProxyActivity().showSuccessMassage(info);
         listener.loginSuccess();
     }
 
     @Override
     public void setLoginError(int code, String msg) {
-        getProxyActivity().showErrorMassage(code,msg);
+        getProxyActivity().showErrorMassage(code, msg);
     }
 
     @Override
@@ -107,7 +114,7 @@ public class SignInDelegate extends CreamSodaDelegate implements SignInContract.
     }
 
     @Override
-    public void setErrorInfo(int code,String info) {
+    public void setErrorInfo(int code, String info) {
         getProxyActivity().showErrorMassage(code, info);
     }
 
@@ -116,7 +123,7 @@ public class SignInDelegate extends CreamSodaDelegate implements SignInContract.
         getProxyActivity().showFailureMassage();
     }
 
-    private String getInputEditText(TextInputEditText editText){
+    private String getInputEditText(EditText editText) {
         return editText.getText().toString().trim();
     }
 
@@ -129,8 +136,8 @@ public class SignInDelegate extends CreamSodaDelegate implements SignInContract.
     }
 
     private void onAttachToContext(Activity activity) {
-        if (activity instanceof ISignInStatusListener){
-            listener= (ISignInStatusListener) activity;
+        if (activity instanceof ISignInStatusListener) {
+            listener = (ISignInStatusListener) activity;
         }
     }
 
@@ -148,4 +155,9 @@ public class SignInDelegate extends CreamSodaDelegate implements SignInContract.
     }
 
 
+
+
+    @OnClick(R.id.sign_in_btn)
+    public void onViewClicked() {
+    }
 }

@@ -84,11 +84,11 @@
     <color name="md_indigo_A200">#536DFE</color>
     <color name="md_indigo_A400">#3D5AFE</color>
     <color name="md_indigo_A700">#304FFE</color>
-
+    <color name="test">#a800cef7</color>
     <!--blue-->
     <color name="md_blue_50">#E3F2FD</color>
-    <color name="md_blue_100">#BBDEFB</color>
-    <color name="md_blue_200">#90CAF9</color>
+    <color name="md_blue_100">#CCBBDEFB</color>
+    <color name="md_blue_200">#CC90CAF9</color>
     <color name="md_blue_300">#64B5F6</color>
     <color name="md_blue_400">#42A5F5</color>
     <color name="md_blue_500">#2196F3</color>
