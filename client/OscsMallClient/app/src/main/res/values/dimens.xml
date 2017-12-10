@@ -18,4 +18,5 @@
     <dimen name="desc_text_size">12sp</dimen>
     <dimen name="normal_size_text">15sp</dimen>
     <dimen name="search_bar_height">80dp</dimen>
+    <dimen name="product_cart_width">162dp</dimen>
 </resources>

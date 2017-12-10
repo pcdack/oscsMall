@@ -23,6 +23,12 @@ public class Const {
     public interface ProductListOrderBy{
         Set<String> PRICE_ASC_DESC= Sets.newHashSet("price_desc","price_asc");
     }
+    public interface CategoryConst{
+        int DefaultCategory=0;
+    }
+    public interface Index{
+        int MaxItemCount=4;
+    }
 
     /**
      * 支付宝状态相关

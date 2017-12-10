@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_card_view"
+    android:layout_marginLeft="10dp"
+    android:layout_width="164dp"
+    android:layout_height="44dp"
+    android:layout_marginBottom="2dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/child_category_image"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:padding="2dp" />
+
+        <TextView
+            android:id="@+id/my_root_category_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/child_category_image"
+            android:maxLines="1"
+            android:text="Fashion"
+            android:textColor="#6000ff"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/my_child_category_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/child_category_image"
+            android:maxLines="1"
+            android:text="men`s,wemen`s"
+            android:textStyle="italic" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

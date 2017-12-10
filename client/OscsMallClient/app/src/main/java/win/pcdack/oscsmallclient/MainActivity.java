@@ -21,13 +21,13 @@ import win.pcdack.creamsoda_core.util.storage.CreamSodaPreference;
 import win.pcdack.oscsmallclient.delegate.launcher.ILauncherFinish;
 import win.pcdack.oscsmallclient.delegate.launcher.Launcher;
 import win.pcdack.oscsmallclient.delegate.main.EcBottomDelegate;
-import win.pcdack.oscsmallclient.delegate.main.index.IndexDelegate;
 import win.pcdack.oscsmallclient.delegate.scroll_launcher.IScrollLauncherFinish;
 import win.pcdack.oscsmallclient.delegate.scroll_launcher.ScrollLauncher;
 import win.pcdack.oscsmallclient.delegate.sign.signIn.ISignInStatusListener;
 import win.pcdack.oscsmallclient.delegate.sign.signIn.SignInDelegate;
 import win.pcdack.oscsmallclient.delegate.sign.signUp.ISignUpStatusListener;
 import win.pcdack.oscsmallclient.delegate.sign.signUp.SignUpDelegate;
+import win.pcdack.oscsmallclient.test.TestDelegate;
 
 public class MainActivity extends ProxyActivity implements ILauncherFinish ,IScrollLauncherFinish,ISignInStatusListener,ISignUpStatusListener{
     //delegate调度室

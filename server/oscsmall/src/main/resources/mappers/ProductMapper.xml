@@ -234,6 +234,15 @@
       </foreach>
     </if>
   </select>
+  <select id="selectByCategoryId" resultMap="BaseResultMap" parameterType="integer">
+    select
+    <include refid="Base_Column_List"/>
+    from oscsmall_product
+    where status = 1
+    <if test="categoryId!=null">
+      and category_id = #{categoryId}
+    </if>
+  </select>
   <select id="selectByKeyWord" resultMap="BaseResultMap" parameterType="map">
     select
     <include refid="Base_Column_List"/>

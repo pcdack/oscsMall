@@ -8,7 +8,6 @@ import win.pcdack.creamsoda_core.delegates.bottom.BaseBottomDelegates;
 import win.pcdack.creamsoda_core.delegates.bottom.BottomItemDelegate;
 import win.pcdack.creamsoda_core.delegates.bottom.BottomTabBean;
 import win.pcdack.creamsoda_core.delegates.bottom.ItemBuilder;
-import win.pcdack.oscsmallclient.TestDelegate;
 import win.pcdack.oscsmallclient.delegate.main.cart.CartDelegate;
 import win.pcdack.oscsmallclient.delegate.main.discover.DiscoverDelegate;
 import win.pcdack.oscsmallclient.delegate.main.index.IndexDelegate;

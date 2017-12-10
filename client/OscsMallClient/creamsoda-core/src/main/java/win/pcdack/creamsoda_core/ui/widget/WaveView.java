@@ -32,7 +32,7 @@ public class WaveView extends View {
 
     private Paint mPaint;
     //贝塞尔曲线
-    private Path mPaths[];
+    private Path mPath;
 
     //一个波浪的长度
     private int mWaveLength = 1000;
@@ -46,10 +46,7 @@ public class WaveView extends View {
     //波纹的大小
     private float mWaveSize;
     //横坐标的偏移量
-    private float mWidthOffsetCycle;
-
-    private float oneWaveLength;
-
+    private float speed;
 
     private DrawFilter mDrawFilter;
 
@@ -60,7 +57,7 @@ public class WaveView extends View {
     public WaveView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         getAttr(context,attrs);
-        mPaths=new Path[3];
+        mPath=new Path();
         initPaint();
 
     }
@@ -71,7 +68,6 @@ public class WaveView extends View {
             waveColor=typedArray.getColor(R.styleable.WaveView_waveColor,0x880000aa);
             mCenterYOffset=typedArray.getDimension(R.styleable.WaveView_waveHeightInScreen,0.0f);
             mWaveSize=typedArray.getFloat(R.styleable.WaveView_waveSize,1.0f);
-            mWidthOffsetCycle=typedArray.getFloat(R.styleable.WaveView_waveWidthOffsetCycle,0.0f);
             // TODO: 17-12-5 获取波数
 
         }finally {
@@ -95,32 +91,30 @@ public class WaveView extends View {
         //加1.5：至少保证波纹有2个，至少2个才能实现平移效果
         mWaveCount = (int) Math.round(mViewWidth / mWaveLength + 1.5);
         //获取一个波的波长
-        oneWaveLength=mWaveLength/mWaveCount;
         mCenterY = mViewHeight/ 2+ConvertUtils.dp2px(mCenterYOffset);
 
+    }
+    public void setSpeed(int speed){
+        this.speed=speed;
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 //        //从canvas层面去锯齿
-//        canvas.setDrawFilter(mDrawFilter);
-//        for (int i = 0; i < mPaths.length; i++) {
-//            mPaths[i].reset();
-//            mPaths[i].moveTo(-mWaveLength+ mOffset, mCenterY-i*50);
-//
-//        }
-//
-//        for (int i = 0; i < mWaveCount; i++) {
-//            //正弦曲线
-//            mPath.quadTo((-mWaveLength * 3 / 4 )+(i * mWaveLength) + mOffset, mCenterY+ 60*mWaveSize, (-mWaveLength / 2)+(i * mWaveLength) + mOffset, mCenterY);
-//            mPath.quadTo((-mWaveLength / 4 )+(i * mWaveLength) + mOffset, mCenterY- 60*mWaveSize, i * mWaveLength + mOffset, mCenterY);
-//        }
-//        mPath.lineTo(mViewWidth, mViewHeight);
-//        mPath.lineTo(0, mViewHeight);
-//        mPath.close();
-//
-//        canvas.drawPath(mPath, mPaint);
+        canvas.setDrawFilter(mDrawFilter);
+        mPath.reset();
+        mPath.moveTo(-mWaveLength+ mOffset, mCenterY);
+        for (int i = 0; i < mWaveCount; i++) {
+            //正弦曲线
+            mPath.quadTo((-mWaveLength * 3 / 4 )+(i * mWaveLength) + mOffset, mCenterY+ 60*mWaveSize, (-mWaveLength / 2)+(i * mWaveLength) + mOffset, mCenterY);
+            mPath.quadTo((-mWaveLength / 4 )+(i * mWaveLength) + mOffset, mCenterY- 60*mWaveSize, i * mWaveLength + mOffset, mCenterY);
+        }
+        mPath.lineTo(mViewWidth, mViewHeight);
+        mPath.lineTo(0, mViewHeight);
+        mPath.close();
+
+        canvas.drawPath(mPath, mPaint);
     }
 
     public void changePosition(){
@@ -129,7 +123,10 @@ public class WaveView extends View {
 
     private void translatePosition() {
         ValueAnimator animator = ValueAnimator.ofInt(0, mWaveLength);
-        animator.setDuration(1000);
+        if (speed==0){
+            speed=1000;
+        }
+        animator.setDuration((long) speed);
         animator.setRepeatCount(ValueAnimator.INFINITE);
         animator.setInterpolator(new LinearInterpolator());
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {

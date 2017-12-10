@@ -102,7 +102,7 @@ dependencies {
     //图片裁剪
     compile 'com.github.yalantis:ucrop:2.2.1-native'
     //permissionsdispatcher
-    compile("com.github.hotchemi:permissionsdispatcher:3.0.1") {
+    compile('com.github.hotchemi:permissionsdispatcher:3.0.1') {
         exclude module: "support-v13"
     }
     annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:3.0.1"
@@ -110,4 +110,5 @@ dependencies {
     compile 'com.zzhoujay.richtext:richtext:2.5.4'
     //二维码扫描
     compile 'me.dm7.barcodescanner:zbar:1.9.3'
+    compile 'com.android.support:cardview-v7:26.0.0-alpha1'
 }

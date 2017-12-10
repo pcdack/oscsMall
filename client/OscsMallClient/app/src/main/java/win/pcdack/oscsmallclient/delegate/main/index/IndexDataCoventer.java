@@ -65,7 +65,7 @@ public class IndexDataCoventer extends DataCoverter {
                                 .build();
                         ENTITIES.add(entity);
                         // TODO: 17-11-16 服务器追加相关数据
-                        initFunctionIconAndText();
+//                        initFunctionIconAndText();
                     }
                 }
                 bannerEndFlag=true;
@@ -86,24 +86,24 @@ public class IndexDataCoventer extends DataCoverter {
         return ENTITIES;
     }
 
-    private void initFunctionIconAndText() {
-        final int size=DomeUrlAndText.IMG_URLS.length;
-        ArrayList<String> imageUrls=new ArrayList<>();
-        ArrayList<String> texts=new ArrayList<>();
-        ArrayList<String> urls=new ArrayList<>();
-        for (int i = 0; i < size; i++) {
-            imageUrls.add(DomeUrlAndText.IMG_URLS[i]);
-            texts.add(DomeUrlAndText.TEXTS[i]);
-            urls.add(DomeUrlAndText.URLS[i]);
-        }
-        MultipleItemEntity entity=MultipleItemEntity.builder()
-                .setField(MultipleFields.ITEM_TYPE,ItemType.FUNC_ITEM)
-                .setField(MultipleFields.IMAGE_URL,imageUrls)
-                .setField(MultipleFields.TEXT,texts)
-                .setField(MultipleFields.URL,urls)
-                .setField(MultipleFields.SPAN_SIZE,4)
-                .build();
-        ENTITIES.add(entity);
-
-    }
+//    private void initFunctionIconAndText() {
+//        final int size=DomeUrlAndText.IMG_URLS.length;
+//        ArrayList<String> imageUrls=new ArrayList<>();
+//        ArrayList<String> texts=new ArrayList<>();
+//        ArrayList<String> urls=new ArrayList<>();
+//        for (int i = 0; i < size; i++) {
+//            imageUrls.add(DomeUrlAndText.IMG_URLS[i]);
+//            texts.add(DomeUrlAndText.TEXTS[i]);
+//            urls.add(DomeUrlAndText.URLS[i]);
+//        }
+//        MultipleItemEntity entity=MultipleItemEntity.builder()
+//                .setField(MultipleFields.ITEM_TYPE,ItemType.FUNC_ITEM)
+//                .setField(MultipleFields.IMAGE_URL,imageUrls)
+//                .setField(MultipleFields.TEXT,texts)
+//                .setField(MultipleFields.URL,urls)
+//                .setField(MultipleFields.SPAN_SIZE,4)
+//                .build();
+//        ENTITIES.add(entity);
+//
+//    }
 }
