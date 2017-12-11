@@ -95,7 +95,7 @@
 
 
 
-![IndexGif](/media/pcdack/SoftWaveDevTools/MyGitProject/OscsMallEc/pic/IndexGif.gif)
+![newIndex](/media/pcdack/SoftWaveDevTools/MyGitProject/OscsMallEc/pic/newIndex.png)
 
 
 
