@@ -95,7 +95,7 @@
 
 
 
-![newIndex](/media/pcdack/SoftWaveDevTools/MyGitProject/OscsMallEc/pic/newIndex.png)
+![newIndex](./pic/newIndex.png)
 
 
 
