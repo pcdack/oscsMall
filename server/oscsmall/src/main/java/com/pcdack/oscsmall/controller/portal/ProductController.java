@@ -5,10 +5,7 @@ import com.pcdack.oscsmall.common.ServerResponse;
 import com.pcdack.oscsmall.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by pcdack on 17-9-11.
@@ -40,6 +37,15 @@ public class ProductController {
                                                       @RequestParam(value = "pageSize",defaultValue = "10") Integer pageSize,
                                                       @RequestParam(value = "orderBy",defaultValue = "") String orderBy){
         return iProductService.getProductByKeyWordCategory(keyword, categoryId, pageNum, pageSize, orderBy);
+    }
+
+    @RequestMapping(value = "searchByCategory.do",method = RequestMethod.POST)
+    @ResponseBody
+    public ServerResponse<PageInfo> searchByCategoryProductList(@RequestParam(value = "categoryId",required = false) Integer categoryId,
+                                                      @RequestParam(value = "pageNum",defaultValue = "1") Integer pageNum,
+                                                      @RequestParam(value = "pageSize",defaultValue = "10") Integer pageSize,
+                                                      @RequestParam(value = "orderBy",defaultValue = "") String orderBy){
+        return iProductService.getProductByCategory(categoryId, pageNum, pageSize, orderBy);
     }
     @RequestMapping(value = "searchByKeyWord.do",method = RequestMethod.POST)
     @ResponseBody

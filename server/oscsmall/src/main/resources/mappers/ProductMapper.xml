@@ -219,7 +219,7 @@
       </if>
     </where>
   </select>
-  <select id="setectByNameAndCategoryId" resultMap="BaseResultMap" parameterType="map">
+  <select id="selectByNameAndCategoryId" resultMap="BaseResultMap" parameterType="map">
     select
     <include refid="Base_Column_List"/>
     from oscsmall_product
@@ -230,11 +230,11 @@
     <if test="categoryIds!=null" >
       and category_id in
       <foreach collection="categoryIds" index="index" open="(" separator="," close=")" item="item">
-        #{item}
+         #{item}
       </foreach>
     </if>
   </select>
-  <select id="selectByCategoryId" resultMap="BaseResultMap" parameterType="integer">
+  <select id="selectByCategoryId" resultMap="BaseResultMap" parameterType="map">
     select
     <include refid="Base_Column_List"/>
     from oscsmall_product

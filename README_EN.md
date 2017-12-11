@@ -74,7 +74,17 @@ Many people think my UI is ugly so I will step by step gradually  beautify the i
 
 ![](./pic/LoginGif.gif)
 
-the show(I will update this Ui in next commit)
+**the new Index **
+
+> the new Index may be have many bugs.So if you want to use it.You need to change the root fragment in MainAcitivity to *NewIndexDelegate* Thx.The stable version will submit in next commit.
+
+![IndexGif](/media/pcdack/SoftWaveDevTools/MyGitProject/OscsMallEc/pic/IndexGif.gif)
+
+
+
+the show
+
+
 
 ![](http://upload-images.jianshu.io/upload_images/2583346-61ab0dd927adabc6.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
 

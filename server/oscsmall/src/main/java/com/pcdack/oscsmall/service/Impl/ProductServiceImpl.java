@@ -198,7 +198,8 @@ public class ProductServiceImpl implements IProductService{
                 PageHelper.orderBy(orderByArray[0]+" "+orderByArray[1]);
             }
         }
-        List<Product> products=productMapper.setectByNameAndCategoryId(keyword,categoryIds);
+        List<Product> products=productMapper.selectByNameAndCategoryId(keyword,categoryIds);
+//        List<Product> products=productMapper.selectByCategoryId(categoryId);
         List<ProductListVo> productListVos=Lists.newArrayList();
         for (Product product : products) {
             productListVos.add(assembleProductList(product));
@@ -209,6 +210,31 @@ public class ProductServiceImpl implements IProductService{
         pageResult.setList(productListVos);
         return ServerResponse.createBySuccess(pageResult);
     }
+
+    @Override
+    public ServerResponse<PageInfo> getProductByCategory(Integer categoryId, Integer pageNum, Integer pageSize, String orderBy) {
+        PageHelper.startPage(pageNum,pageSize);
+        if (categoryId ==null){
+            return ServerResponse.createByErrorCodeMessage(ResponseCode.ILLEGAL_ARGUMENT.getCode(),ResponseCode.ILLEGAL_ARGUMENT.getMsg());
+        }
+        if (StringUtils.isNotBlank(orderBy)) {
+            if (Const.ProductListOrderBy.PRICE_ASC_DESC.contains(orderBy)) {
+                String[] orderByArray = orderBy.split("_");
+                PageHelper.orderBy(orderByArray[0]+" "+orderByArray[1]);
+            }
+        }
+        List<Product> products=productMapper.selectByCategoryId(categoryId);
+        List<ProductListVo> productListVos=Lists.newArrayList();
+        for (Product product : products) {
+            productListVos.add(assembleProductList(product));
+        }
+        @SuppressWarnings("unchecked")
+        PageInfo pageResult=new PageInfo(products);
+        //noinspection unchecked
+        pageResult.setList(productListVos);
+        return ServerResponse.createBySuccess(pageResult);
+    }
+
     private ProductDetailVo assembleProductDetailVo(Product product) {
         ProductDetailVo productDetailVo=new ProductDetailVo();
         productDetailVo.setId(product.getId());

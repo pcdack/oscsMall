@@ -19,6 +19,7 @@ import win.pcdack.creamsoda_core.app.CreamSoda;
 import win.pcdack.oscsmallclient.database.DatabaseManager;
 import win.pcdack.oscsmallclient.delegate.main.discover.SharedEvent;
 import win.pcdack.oscsmallclient.delegate.main.discover.ToastyEvent;
+import win.pcdack.oscsmallclient.icon.CategoryModule;
 
 /**
  * Created by pcdack on 17-11-8.
@@ -41,6 +42,7 @@ public class App extends Application {
         });
         loggingInterceptor.setLevel(level);
         CreamSoda.init(this)
+                .withIconifyIcon(new CategoryModule())
                 .withIconifyIcon(new FontAwesomeModule())
                 .withApiHost("http://127.0.0.1")
                 .withLoggerAdapter(new AndroidLogAdapter())

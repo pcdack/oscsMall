@@ -67,7 +67,7 @@ public class SearchGoodsPresenter implements SearchGoodsContract.Presenter{
     public void initSearchByKeyWordAndCategory(String keyword, int categoryId) {
         RxRestClient.builder().url(GlobalUrlVal.PRODUCT_SEARCH)
                 .params("keyword",keyword)
-                .params("category",categoryId)
+                .params("categoryId",categoryId)
                 .build()
                 .post()
                 .subscribeOn(Schedulers.io())

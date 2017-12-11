@@ -89,9 +89,19 @@
 
 
 
+**展示页面Ｂａｔｅ**
+
+> 注意：这个界面并没有直接接到当前项目中，只是一个测试版（有很多bug,需要慢慢修复），如果要在OscsMall中使用这个界面，需要在MainActivity中指定。
+
+
+
+![IndexGif](/media/pcdack/SoftWaveDevTools/MyGitProject/OscsMallEc/pic/IndexGif.gif)
+
 
 
 展示
+
+
 
 ![](http://upload-images.jianshu.io/upload_images/2583346-61ab0dd927adabc6.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/700)
 

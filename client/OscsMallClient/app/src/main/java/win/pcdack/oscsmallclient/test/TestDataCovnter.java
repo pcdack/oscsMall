@@ -5,11 +5,12 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import win.pcdack.creamsoda_core.ui.recycler.DataCoverter;
 import win.pcdack.creamsoda_core.ui.recycler.MultipleFields;
 import win.pcdack.creamsoda_core.ui.recycler.MultipleItemEntity;
+import win.pcdack.oscsmallclient.test.sub.SubCategoryItem;
+import win.pcdack.oscsmallclient.test.sub.SubProductItem;
 
 /**
  * Created by pcdack on 17-12-7.
@@ -27,10 +28,10 @@ public class TestDataCovnter extends DataCoverter{
         final int size=categoryVos.size();
         MultipleItemEntity entity;
         entity=MultipleItemEntity.builder()
-                .setField(MultipleFields.ITEM_TYPE,TestItemType.CATEGORY)
-                .setField(TestFields.NAME,"Categories")
-                .setField(TestFields.ID,0)
-                .setField(TestFields.IMAGE,null)
+                .setField(MultipleFields.ITEM_TYPE, NewIndexItemType.CATEGORY)
+                .setField(NewIndexFields.NAME,"Categories")
+                .setField(NewIndexFields.ID,0)
+                .setField(NewIndexFields.IMAGE,null)
                 .build();
         multipleItemEntities.add(entity);
         ArrayList<SubCategoryItem> subCategoryItems=new ArrayList<>();
@@ -49,13 +50,14 @@ public class TestDataCovnter extends DataCoverter{
             }
             SubCategoryItem item=new SubCategoryItem();
             item.setTitle(name);
+            item.setImage(image);
             item.setSubTitle(childNames.toString());
             subCategoryItems.add(item);
         }
         entity=MultipleItemEntity.builder()
-                .setField(MultipleFields.ITEM_TYPE,TestItemType.SUB_ITEM)
-                .setField(TestFields.SUB_CATEGORY,subCategoryItems)
-                .setField(TestFields.CATEGORY_PRODUCT_FLAG,true)
+                .setField(MultipleFields.ITEM_TYPE, NewIndexItemType.SUB_ITEM)
+                .setField(NewIndexFields.SUB_CATEGORY,subCategoryItems)
+                .setField(NewIndexFields.CATEGORY_PRODUCT_FLAG,true)
                 .build();
         multipleItemEntities.add(entity);
         //category With product 信息
@@ -67,10 +69,10 @@ public class TestDataCovnter extends DataCoverter{
             final String name=categoryWithProductObject.getString("name");
             final String categoryImage=categoryWithProductObject.getString("categoryImg");
             entity=MultipleItemEntity.builder()
-                    .setField(MultipleFields.ITEM_TYPE,TestItemType.CATEGORY)
-                    .setField(TestFields.NAME,name)
-                    .setField(TestFields.ID,categoryId)
-                    .setField(TestFields.IMAGE,categoryImage)
+                    .setField(MultipleFields.ITEM_TYPE, NewIndexItemType.CATEGORY)
+                    .setField(NewIndexFields.NAME,name)
+                    .setField(NewIndexFields.ID,categoryId)
+                    .setField(NewIndexFields.IMAGE,categoryImage)
                     .build();
             multipleItemEntities.add(entity);
             ArrayList<SubProductItem> productItems=new ArrayList<>();
@@ -88,14 +90,15 @@ public class TestDataCovnter extends DataCoverter{
                 subProductItem.setName(productName);
                 subProductItem.setSubTitle(productSubtitle);
                 subProductItem.setImage(productMainImage);
+                subProductItem.setId(id);
                 subProductItem.setPrice(String.valueOf(productPrice));
                 productItems.add(subProductItem);
             }
             if (productItems.size()>0) {
                 entity = MultipleItemEntity.builder()
-                        .setField(MultipleFields.ITEM_TYPE, TestItemType.SUB_ITEM)
-                        .setField(TestFields.PRODUCTS, productItems)
-                        .setField(TestFields.CATEGORY_PRODUCT_FLAG, false)
+                        .setField(MultipleFields.ITEM_TYPE, NewIndexItemType.SUB_ITEM)
+                        .setField(NewIndexFields.PRODUCTS, productItems)
+                        .setField(NewIndexFields.CATEGORY_PRODUCT_FLAG, false)
                         .build();
                 multipleItemEntities.add(entity);
             }

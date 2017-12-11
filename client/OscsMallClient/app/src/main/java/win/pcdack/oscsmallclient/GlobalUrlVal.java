@@ -7,7 +7,7 @@ package win.pcdack.oscsmallclient;
 
 public class GlobalUrlVal {
 
-    private static final String BASE_URL="http://39.108.169.241:8080/oscsmall";
+    private static final String BASE_URL="http://172.28.84.29:8080";
     //user
     private static final String USER_URL=BASE_URL+"/user/";
     public static final String SIGN_IN_URL=USER_URL+"login.do";
